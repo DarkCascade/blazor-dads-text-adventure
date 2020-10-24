@@ -1,0 +1,67 @@
+@page "/adventure"
+
+<div class="mainSceneBackground">
+    <span class="mainScene">@((MarkupString) @ActiveSceneText)</span>
+</div>
+
+<div style="margin-top:10px;">
+    <button class="btn btn-primary" @onclick="Action1_Click">Try to open the metal door</button>
+    <button class="btn btn-primary" @onclick="Action2_Click">Leave the vault and return to your desk</button>
+</div>
+
+@code {
+    private static Dictionary<string, string> SceneText =
+        new Dictionary<string, string>() {
+        {
+            "Scene1",
+            $"You are an Air Force Captain assigned to the 89th Special<br />" +
+            $"Operations Group at Andrews AFB, Maryland. You have just<br />" +
+            $"been transferred to the Operations Center and are alone on the<br />" +
+            $"swing shift. You get up to get another<br />" +
+            $"cup of coffee and wander into the vault. As you glance<br />" +
+            $"around the room, you see, on the far wall, floor to ceiling<br />" +
+            $"shelves with thousands of tape reels stored side by side.<br />" +
+            $"On the wall to your left are half a dozen, safe-type filing<br />" +    
+            $"cabinets which appear to be locked. On the wall to your right<br />" +
+            $"is a locked metal door."
+        },
+        {
+            "Scene1_End",
+            $"You return to your desk, settle into your chair and never go<br />" +
+            $"exploring again. You obviously made the wrong choice."
+        },
+        {
+            "Scene2",
+            $"You proceed to the door and try the handle. It is locked.<br />" +
+            $"On the door is a sign which states:<br /><br />" +
+            GetSpaces(7) + $"ACCESS LIMITED<br />" +
+            GetSpaces(3) + $"SECTION 'G' PERSONNEL<br />" +
+            GetSpaces(12) + $"ONLY<br />" +
+            GetSpaces(10) + $"EXECUTIVE ORDER 117069<br /><br />" +
+            $"You stare puzzled, wondering who Section 'G' personnel are?<br />" +
+            $"You wonder if your boss may have a file in his office which<br />" +
+            $"will fill you in on Section 'G'."
+        }
+    };
+    
+    private string ActiveSceneText { get; set; } = SceneText["Scene1"];
+
+    private static string GetSpaces(int numSpaces)
+    {
+        var retString = string.Empty;
+        for (var index = 0; index < numSpaces; index++)
+        {
+            retString += "&nbsp;";
+        }
+
+        return retString;
+    }
+
+    private void Action1_Click() {
+        ActiveSceneText = SceneText["Scene2"];
+    }
+    
+    private void Action2_Click() {
+        ActiveSceneText = SceneText["Scene1_End"];
+    }
+}

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Commodore64';
+    src: url('../fonts/Commodore64.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VT323';
+    src: url('../fonts/VT323-Regular.ttf') format('truetype');
+}
+
+.mainSceneBackground {
+    width: 480px;
+    height: 320px;
+    background: black;
+}
+
+.mainScene {
+    color: green;
+    font-family: 'VT323';
+    margin-left: 3px;
+}
