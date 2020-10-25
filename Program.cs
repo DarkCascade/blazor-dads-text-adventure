@@ -8,6 +8,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
+using blazor_dads_text_adventure.Utilities;
+
 namespace blazor_dads_text_adventure
 {
     public class Program
@@ -22,6 +24,7 @@ namespace blazor_dads_text_adventure
                 {
                     BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
                 });
+            builder.Services.AddScoped<SceneLoader>();
 
             await builder.Build().RunAsync();
         }

@@ -8,16 +8,37 @@
     src: url('../fonts/VT323-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'ClassicConsole';
+    src: url('../fonts/clacon.ttf') format('truetype');
+}
+
+.backgroundOfBackground {
+    width: 780px;
+    height: 400px;
+    background: #0088AA;
+    padding-top: 20px;
+}
+
 .mainSceneBackground {
-    width: 480px;
-    height: 320px;
-    background: black;
+    width: 740px;
+    height: 360px;
+    background: #0000AA;
+    border-radius: 10px;
+    margin-left: 20px;
 }
 
 .mainScene {
-    color: green;
-    font-family: 'VT323';
+    color: #0088AA;
+    font-family: 'ClassicConsole';
+    font-size: 30px;
     margin-left: 3px;
+    margin-top: 3px;
+    line-height: normal;
+}
+
+.availableActions {
+    margin-top: 5px;
 }
 
 .restartButton {

@@ -1,0 +1,82 @@
+[
+    {
+        "SceneKey": "scene0",
+        "Lines": [
+            { "spaces": 4, "line": "**** COMMODORE 64 BASIC V2 ****" },
+            { "spaces": 0, "line": "64K RAM SYSTEM&nbsp;&nbsp;38911 BASIC BYTES FREE" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "READY."}
+        ],
+        "Actions": [
+            { "target": "scene1", "text": "Load the Adventure" },
+            { "target": "scene0", "text": "Never mind" }
+        ]
+    },
+    {
+        "SceneKey": "scene1",
+        "Lines": [                        
+            { "spaces": 0, "line": "You are an Air Force Captain assigned to the 89th Special" },
+            { "spaces": 0, "line": "Operations Group at Andrews AFB, Maryland. You have just" },
+            { "spaces": 0, "line": "been transferred to the Operations Center and are alone" },
+            { "spaces": 0, "line": "on the swing shift." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "You get up to get another cup of coffee and wander into" },
+            { "spaces": 0, "line": "the vault. As you glance around the room, you see, on the" },
+            { "spaces": 0, "line": "far wall, floor to ceiling shelves with thousands of tape" },
+            { "spaces": 0, "line": "reels stored side by side." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "On the wall to your left are half a dozen, safe-type filing" },    
+            { "spaces": 0, "line": "cabinets which appear to be locked. On the wall to your right" },
+            { "spaces": 0, "line": "is a locked metal door." }
+        ],
+        "Actions": [
+            {
+                "text": "Try to open the metal door",
+                "target": "scene2"
+            },
+            {
+                "text": "Leave the vault and return to your desk",
+                "target": "scene1_end"
+            }
+        ]
+    },
+    {
+        "SceneKey": "scene1_end",
+        "Lines": [                        
+            { "spaces": 0, "line": "You return to your desk, settle into your chair and never go" },
+            { "spaces": 0, "line": "exploring again. You obviously made the wrong choice." }
+        ],
+        "Actions": [
+            {
+                "text": "Try again",
+                "target": "scene1"
+            }
+        ]
+    },
+    {
+        "SceneKey": "scene2",
+        "Lines": [
+            { "spaces": 0, "line": "You proceed to the door and try the handle. It is locked." },
+            { "spaces": 0, "line": "On the door is a sign which states:" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 7, "line": "ACCESS LIMITED" },
+            { "spaces": 3, "line": "SECTION 'G' PERSONNEL" },
+            { "spaces": 12, "line": "ONLY" },
+            { "spaces": 10, "line": "EXECUTIVE ORDER 117069" },
+            { "spaces": 0, "line": ""},
+            { "spaces": 0, "line": "You stare puzzled, wondering who Section 'G' personnel are?" },
+            { "spaces": 0, "line": "You wonder if your boss may have a file in his office which" },
+            { "spaces": 0, "line": "will fill you in on Section 'G'." }
+        ],
+        "Actions": [
+            {
+                "text": "Go into his office",
+                "target": "scene0"
+            },
+            {
+                "text": "Return to your desk and think things out",
+                "target": "scene0"
+            }
+        ]
+    }
+]
