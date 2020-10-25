@@ -19,3 +19,7 @@
     font-family: 'VT323';
     margin-left: 3px;
 }
+
+.restartButton {
+    margin-bottom: 10px;
+}
