@@ -21,7 +21,7 @@ jobs:
           run: dotnet publish blazor-dads-text-adventure.csproj -c Release -o release --nologo
       # Changes base-tag in html to point to correct location
         - name: Modify base-tag in index.html to point to repository
-          run: sed -i 's/<base-href="\/" \/>/<base href="\/blazor-dads-text-adventure\/" \/>/g' release/wwwroot/index.html
+          run: sed -i 's/<base href="\/" \/>/<base href="\/blazor-dads-text-adventure\/" \/>/g' release/wwwroot/index.html
       # add .nojekyll file to avoid Jekyll build since it is unnecessary
         - name: Add .nojekyll file
           run: touch release/wwwroot/.nojekyll
