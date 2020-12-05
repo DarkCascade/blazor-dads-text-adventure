@@ -24,7 +24,11 @@ else
     <div class="availableActions">
         @foreach (var action in @ActiveScene.Actions)
         {
-            <button class="btn btn-primary" @onclick=@((e) => { ExecuteAction(action.Target); })>@action.Text</button>
+            <div class="actionButton">
+                <button
+                    class="btn btn-primary"
+                    @onclick=@((e) => { ExecuteAction(action.Target); })>@action.Text</button>
+            </div>            
         }
     </div>
 
