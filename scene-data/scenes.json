@@ -8,8 +8,20 @@
             { "spaces": 0, "line": "READY."}
         ],
         "Actions": [
-            { "target": "scene1", "text": "Load the Adventure" },
-            { "target": "scene0", "text": "Never mind" }
+            { "target": "scene1", "text": "Load \"*\",8,1" },
+            { "target": "quit", "text": "Never mind" }
+        ]
+    },
+    {
+        "SceneKey": "quit",
+        "Lines": [
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "See you later" }
+        ],
+        "Actions": [
+            { "target": "scene0", "text": "Restart"}
         ]
     },
     {
@@ -30,14 +42,8 @@
             { "spaces": 0, "line": "is a locked metal door." }
         ],
         "Actions": [
-            {
-                "text": "Try to open the metal door",
-                "target": "scene2"
-            },
-            {
-                "text": "Leave the vault and return to your desk",
-                "target": "scene1_end"
-            }
+            { "target": "scene2", "text": "Try to open the metal door" },
+            { "target": "scene1_end", "text": "Leave the vault and return to your desk" }
         ]
     },
     {
@@ -47,10 +53,8 @@
             { "spaces": 0, "line": "exploring again. You obviously made the wrong choice." }
         ],
         "Actions": [
-            {
-                "text": "Try again",
-                "target": "scene1"
-            }
+            { "target": "scene1", "text": "Try Again" },
+            { "target": "quit", "text": "Quit" }
         ]
     },
     {
@@ -69,14 +73,793 @@
             { "spaces": 0, "line": "will fill you in on Section 'G'." }
         ],
         "Actions": [
+            { "target": "scene3", "text": "Go into his office" },
+            { "target": "scene5b", "text": "Return to your desk and think things out" }
+        ]
+    },
+    {
+        "SceneKey": "scene3",
+        "Lines": [
+            { "spaces": 0, "line": "You leave the vault and walk through your office to Col. Ted" },
+            { "spaces": 0, "line": "Landry's office. The door is locked." }
+        ],
+        "Actions": [
+            { "target": "scene4", "text": "Try to get in with a credit card" },
+            { "target": "scene5", "text": "Go ask the security guard for a key" },
+            { "target": "scene5b", "text": "Forget the whole thing and go back to your desk" }
+        ]
+    },
+    {
+        "SceneKey": "scene4",
+        "Lines": [
+            { "spaces": 0, "line": "You take out a credit card and slide it between the door jamb" },
+            { "spaces": 0, "line": "and the lock. In a few seconds you hear a click and the door" },
+            { "spaces": 0, "line": "swings open. You decide to check the desk first and begin" },
+            { "spaces": 0, "line": "opening drawers. In the middle drawer, you notice pencils," },
+            { "spaces": 0, "line": "paper, and assorted pens. Stuck in the back is a large roll" },
+            { "spaces": 0, "line": "of dollar bills." }
+        ],
+        "Actions": [
             {
-                "text": "Go into his office",
-                "target": "scene0"
-            },
-            {
-                "text": "Return to your desk and think things out",
-                "target": "scene0"
+                "text": "Next",
+                "target":"scene4b"
             }
+        ]
+    },
+    {
+        "SceneKey": "scene4b",
+        "Lines": [
+            { "spaces": 0, "line": "Just as you remove the money, the door bursts" },
+            { "spaces": 0, "line": "open, and you are arrested by a squad of security police." },
+            { "spaces": 0, "line": "It seems that you tripped a silent alarm as you entered the" },
+            { "spaces": 0, "line": "room. You spend the next ten years in Leavenworth where" },
+            { "spaces": 0, "line": "you turn gay and upon your release, move to San Francisco." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "For you, the adventure is over, or beginning, depending on" },
+            { "spaces": 0, "line": "your outlook." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "Care to try again?" }
+        ],
+        "Actions": [
+            { "target": "scene1", "text": "Yes" },
+            { "target": "quit", "text": "No" }
+        ]
+    },
+    {
+        "SceneKey": "scene5",
+        "Lines": [
+            { "spaces": 0, "line": "You walk down the hall to the front foyer. The security" },
+            { "spaces": 0, "line": "police guard is seated at a desk reading a book. He see" },
+            { "spaces": 0, "line": "you coming and stands." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "\"Good evening sir,\" he says. \"May I help you?\"" },
+            { "spaces": 0, "line": "You explain that you are working on a project for your boss" },
+            { "spaces": 0, "line": "and you need some information from a wall chart in his office." },
+            { "spaces": 0, "line": "Unfortunately, you don't have a key."},
+            { "spaces": 0, "line": "The guard explains that the colonel just had a new alarm" },
+            { "spaces": 0, "line": "system put in and he doesn't have a key either. He apologizes" },
+            { "spaces": 0, "line": "and you return to your office to think." }
+        ],
+        "Actions": [
+            { "target": "scene5b", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene5b",
+        "Lines": [
+            { "spaces": 0, "line": "You sit down at your desk wondering what to do next." },
+            { "spaces": 0, "line": "You begin to absent-mindedly flip through the duty roster" },
+            { "spaces": 0, "line": "when you suddenly notice the term \"Key Custodian\" on one" },
+            { "spaces": 0, "line": "of the pages. You see that the unit Key Custodian is a Tech" },
+            { "spaces": 0, "line": "Sgt. Davidson who has a desk across the room from yours." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "You get up and go over to his large grey metal desk. You open" },
+            { "spaces": 0, "line": "three drawers before finding a small wooden box. In the front" },
+            { "spaces": 0, "line": "of the box are cards used to issue keys to appropriate" },
+            { "spaces": 0, "line": "personnel and a \"Key Inventory Record\" listing all keys" },
+            { "spaces": 0, "line": "used in the building. In the back of the box are small" },
+            { "spaces": 0, "line": "plastic bags containing rings of keys." }
+        ],
+        "Actions": [
+            { "target": "scene5c", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene5c",
+        "Lines": [
+            { "spaces": 0, "line": "There is also an envelope labeled \"New Alarm System\" in" },
+            { "spaces": 0, "line": "which are 9 cylindrical keys used to turn off the alarms." },
+            { "spaces": 0, "line": "You pick up one of the plastic bags and notice that each" },
+            { "spaces": 0, "line": "of the keys on the ring is appropriately labeled:" },
+            { "spaces": 0, "line": "\"Latrine\"" },
+            { "spaces": 0, "line": "\"Boiler Room\"" },
+            { "spaces": 0, "line": "\"CC's Office\" etc." }
+        ],
+        "Actions": [
+            { "target": "scene6", "text": "Take the two keys you need" },
+            { "target": "scene7", "text": "Adjust the inventory sheet" },
+            { "target": "scene8", "text": "Sit back and think about it over a cup of coffee" }
+        ]
+    },
+    {
+        "SceneKey": "scene6",
+        "Lines": [
+            { "spaces": 0, "line": "You take the key to the CC's office and a key to the alarm" },
+            { "spaces": 0, "line": "system. Just as you put the keys in your pocket, you hear" },
+            { "spaces": 0, "line": "footsteps. It is TSgt Davidson. He has returned to do a key" },
+            { "spaces": 0, "line": "inventory that he forgot that afternoon." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "You breathe a sigh of relief as he finishes up and says good" },
+            { "spaces": 0, "line": "night. Your relief is short-lived, however, as he returns" },
+            { "spaces": 0, "line": "several minutes later with a squad of security police. You" },
+            { "spaces": 0, "line": "know the rest of the story." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "Needless to say, you spend some rather unpleasant years in" },
+            { "spaces": 0, "line": "Leavenworth and fade into obscurity, only to emerge years" },
+            { "spaces": 0, "line": "later as a writer of computer adventure games. For now," },
+            { "spaces": 0, "line": "this adventure is over." }
+        ],
+        "Actions": [
+            { "target": "scene1", "text": "Try Again" },
+            { "target": "quit", "text": "Quit" }
+        ]
+    },
+    {
+        "SceneKey": "scene7",
+        "Lines": [
+            { "spaces": 0, "line": "You take out the inventory and a bottle of \"Typist's Best" },
+            { "spaces": 0, "line": "Friend.\" You adjust a few numbers and are getting ready to" },
+            { "spaces": 0, "line": "clean things up when the building is evacuated by a disaster" },
+            { "spaces": 0, "line": "exercise. Before you can return to the office, the day shift" },
+            { "spaces": 0, "line": "arrives. Good old Tech Sgt. Davidson initiates an" },
+            { "spaces": 0, "line": "investigation to determine who has been rifling through his" },
+            { "spaces": 0, "line": "desk and the result is obvious. Once again you've blown it." },
+            { "spaces": 0, "line": "Sorry!" }
+        ],
+        "Actions": [
+            { "target": "scene1", "text": "Try Again" },
+            { "target": "quit", "text": "Quit" }
+        ]
+    },
+    {
+        "SceneKey": "scene8",
+        "Lines": [
+            { "spaces": 0, "line": "As you're sipping on a cup of brew, TSgt Davidson walks in." },
+            { "spaces": 0, "line": "He looks rather frenzied and when you ask him what's up, he" },
+            { "spaces": 0, "line": "explains that his kid is sick and he forgot all about doing a" },
+            { "spaces": 0, "line": "key inventory which has to be done before morning." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "Smiling broadly, you stand up and tell him you'll be happy" },
+            { "spaces": 0, "line": "to take care of it if he'll just sign the inventory sheet." },
+            { "spaces": 0, "line": "He is so grateful, he quickly obliges and heads home again." },
+            { "spaces": 0, "line": "Alone again, you scan the old sheets and notice that some keys" },
+            { "spaces": 0, "line": "are destroyed every few months and also that no initial" },
+            { "spaces": 0, "line": "inventory count for the alarm keys was ever done." }
+        ],
+        "Actions": [
+            { "target": "scene8b", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene8b",
+        "Lines": [
+            { "spaces": 0, "line": "Within 30 minutes, you are the proud owner of a key to the" },
+            { "spaces": 0, "line": "Colonel's office which is listed as previously destroyed," },
+            { "spaces": 0, "line": "and the number of alarm keys has been reduced by one." },
+            { "spaces": 0, "line": "You look at your watch and notice that it is now 0400" },
+            { "spaces": 0, "line": "and the day shift will be in at 0430. You decide to quit for" },
+            { "spaces": 0, "line": "the night and resume your activities tomorrow." }
+        ],
+        "Actions": [
+            { "target": "scene8c", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene8c",
+        "Lines": [
+            { "spaces": 0, "line": "It is now the next night at midnight. You have been sitting" },
+            { "spaces": 0, "line": "alone in your office for several hours now waiting for the" },
+            { "spaces": 0, "line": "Colonel to leave. You are starting to get anxious and you" },
+            { "spaces": 0, "line": "pick up the phone to check the time. As you lift the receiver" },
+            { "spaces": 0, "line": "you hear a conversation going on." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "A strange voice states \"That fool Bergman is going to sell" },
+            { "spaces": 0, "line": "the story to the Washington Post!\"" }            
+        ],
+        "Actions": [
+            { "target": "scene8d", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene8d",
+        "Lines": [
+            { "spaces": 0, "line": "Landry's familiar voice replies: \"Don't worry, pea brain." },
+            { "spaces": 0, "line": "I'll take care of my end, you just take care of yours!\""},
+            { "spaces": 0, "line": "\"Pea Brain\" replies, \"You've got to destroy the file," },
+            { "spaces": 0, "line": "blockhead, otherwise we'll all go down together!\"" },
+            { "spaces": 0, "line": "\"Okay, okay! Just be careful. Good night.\"" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "Both men hang up and you sit back puzzled. All of a sudden" },
+            { "spaces": 0, "line": "Landry's door flies open and he goes barreling past you into" },
+            { "spaces": 0, "line": "the vault. He didn't even seem to notice you." },
+            { "spaces": 0, "line": "You see him pull a key from his pocket and" },
+            { "spaces": 0, "line": "open the door inside the vault." }
+        ],
+        "Actions": [
+            { "target": "scene8_end", "text": "Sneak in and see what he's doing" },
+            { "target": "scene9", "text": "Don't risk it and wait until later" }
+        ]
+    },
+    {
+        "SceneKey": "scene8_end",
+        "Lines": [
+            { "spaces": 0, "line": "You get up and peek around the corner of the vault. You see" },
+            { "spaces": 0, "line": "the Colonel leaning over a red safe. All of a sudden you feel" },
+            { "spaces": 0, "line": "a sharp pain in your head. You were hit over the head by" },
+            { "spaces": 0, "line": "someone who snuck into the room behind you. You go into" },
+            { "spaces": 0, "line": "a coma and become the subject of a Stephen King novel" },
+            { "spaces": 0, "line": "several years later. However, you never regain consciousness." }
+        ],
+        "Actions": [
+            { "target": "scene1", "text": "Try Again" },
+            { "target": "quit", "text": "Quit" }
+        ]
+    },
+    {
+        "SceneKey": "scene9",
+        "Lines": [
+            { "spaces": 0, "line": "You sit at your desk pretending to go through your \"In\"" },
+            { "spaces": 0, "line": "basket which is overflowing into your \"Out\" basket. From" },
+            { "spaces": 0, "line": "the vault you hear \"Oh shit!\" and several seconds later" },
+            { "spaces": 0, "line": "the Colonel hastens past you back into his office. You jump" },
+            { "spaces": 0, "line": "up and peek into the vault. You see a red key sticking out" },
+            { "spaces": 0, "line": "of the metal door and just have time to return to your seat" },
+            { "spaces": 0, "line": "before the Colonel comes back. He stays in the vault for" },
+            { "spaces": 0, "line": "several more minutes before finally locking everything up" },
+            { "spaces": 0, "line": "and going home." },
+            { "spaces": 0, "line": "Alone at last, you go to the Colonel's office door." },
+            { "spaces": 0, "line": "Outside the door is a small box. You insert your key and turn" },
+            { "spaces": 0, "line": "the alarm off, then unlock the door and walk in. As you look" },
+            { "spaces": 0, "line": "around you notice a filing cabinet and a desk." }
+        ],
+        "Actions": [
+            { "target": "scene10", "text": "Check the filing cabinet" },
+            { "target": "scene11b", "text": "Search the desk" }
+        ]
+    },
+    {
+        "SceneKey": "scene10",
+        "Lines": [
+            { "spaces": 0, "line": "You proceed to the filing cabinet and see that it is locked." }
+        ],
+        "Actions": [
+            { "target": "scene11", "text": "Try to pry it open" },
+            { "target": "scene11b", "text": "Look in the Colonel's desk for a key" }
+        ]
+    },
+    {
+        "SceneKey": "scene11",
+        "Lines": [
+            { "spaces": 0, "line": "You should know by now that such crude methods as trying" },
+            { "spaces": 0, "line": "to pry open a filing cabinet will only get you in trouble." },
+            { "spaces": 0, "line": "Why not just search the desk?" }
+        ],
+        "Actions": [
+            { "target": "scene11b", "text": "Fine. Search the desk" }
+        ]
+    },
+    {
+        "SceneKey": "scene11b",
+        "Lines": [
+            { "spaces": 0, "line": "You go around a large, dark brown mahogany desk and look in" },
+            { "spaces": 0, "line": "the drawers. In the top, middle drawer you see a small" },
+            { "spaces": 0, "line": "key inscribed \"Marco Filing Equip, Inc.\" You quickly search" },
+            { "spaces": 0, "line": "the rest of the desk but discover nothing of interest, so" },
+            { "spaces": 0, "line": "you move to the filing cabinet. The key from the desk works" },
+            { "spaces": 0, "line": "perfectly and the drawer slides open. At the front are several" },
+            { "spaces": 0, "line": "inches of files. At the back is an attache case." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "The files all seem to be personnel reports and otherwise" },
+            { "spaces": 0, "line": "useless information, so you turn your attention to the" },
+            { "spaces": 0, "line": "attache case. You set it on the desk and open it. There" },
+            { "spaces": 0, "line": "are a few travel folders and some personal items." }
+        ],
+        "Actions": [
+            { "target": "scene11c", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene11c",
+        "Lines": [
+            { "spaces": 0, "line": "In the midst of the clutter is a small notebook. You open" },
+            { "spaces": 0, "line": "to the first page and see:" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "\"J\" - 22&nbsp;&nbsp;14&nbsp;&nbsp;39 - 10/1" },
+            { "spaces": 0, "line": "\"K\" - 15&nbsp;&nbsp;89&nbsp;&nbsp;42 - 11/1" },
+            { "spaces": 0, "line": "\"L\" - 66&nbsp;&nbsp;39&nbsp;&nbsp;41 - 12/1" },
+            { "spaces": 0, "line": "\"A\" - 43&nbsp;&nbsp;28&nbsp;&nbsp;15 - 01/1" },
+            { "spaces": 0, "line": "\"B\" - 37&nbsp;&nbsp;88&nbsp;&nbsp;26 - 02/1" },
+            { "spaces": 0, "line": "\"C\" - 20&nbsp;&nbsp;47&nbsp;&nbsp;83 - 03/1" }
+        ],
+        "Actions": [
+            { "target": "scene11d", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene11d",
+        "Lines": [
+            { "spaces": 0, "line": "You flip through the rest of the notebook and are disturbed" },
+            { "spaces": 0, "line": "to find that all of the remaining pages are blank." },
+            { "spaces": 0, "line": "You search the rest of the attache case and there, taped to" },
+            { "spaces": 0, "line": "the back is a small red key will looks like the one used by" },
+            { "spaces": 0, "line": "Landry to open the vault." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "The red key unlocks the inner door and you enter the room." },
+            { "spaces": 0, "line": "It is quite small and dusty. It contains a small set of" },
+            { "spaces": 0, "line": "metal shelves which are empty, and a two-drawer safe. "},
+            { "spaces": 0, "line": "You now realize that the numbers in the notebook are safe" },
+            { "spaces": 0, "line": "combinations. You must choose one to try." }
+        ],
+        "Actions": [
+            { "target": "scene11e", "text": "22-14-39" },
+            { "target": "scene11e", "text": "15-89-42" },
+            { "target": "scene11e", "text": "66-39-41" },
+            { "target": "scene12",  "text": "43-28-15" },
+            { "target": "scene11e", "text": "37-88-26" },
+            { "target": "scene11e", "text": "20-47-83" }
+        ]
+    },
+    {
+        "SceneKey": "scene11e",
+        "Lines": [
+            { "spaces": 0, "line": "This combination does not open the safe!" }
+        ],
+        "Actions": [
+            { "target": "scene11d", "text": "Try another combination" }
+        ]
+    },
+    {
+        "SceneKey": "scene12",
+        "Lines": [
+            { "spaces": 0, "line": "The top drawer of the safe slides open. Inside are three" },
+            { "spaces": 0, "line": "computer diskettes. The rest of the safe is empty." },
+            { "spaces": 0, "line": "Each disk has a different colored label. The blue label" },
+            { "spaces": 0, "line": "is titled \"Pit Viper,\" the green one is titled \"Scorpion,\"" },
+            { "spaces": 0, "line": "and the red is titled \"White Sands.\" You take the diskettes" },
+            { "spaces": 0, "line": "and go to the computer in your office." }
+        ],
+        "Actions": [
+            { "target": "scene12b", "text": "Insert the blue diskette" }
+        ]
+    },
+    {
+        "SceneKey": "scene12b",
+        "Lines": [
+            { "spaces": 0, "line": "You insert the blue diskette and type \"Load Pit Viper\"" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "Once loaded, the screen reads:" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 12, "line": "*IT *IPER" },
+            { "spaces": 0, "line": "*URPOSE: *O STUDY THE EFFECTS OF FALLOUT ON THE" },
+            { "spaces": 9, "line": "DIAMONDBACK RATTLESNAKE." }
+        ],
+        "Actions": [
+            { "target": "scene12_end", "text": "Read on" },
+            { "target": "scene12c", "text": "Insert the green diskette" }
+        ]
+    },
+    {
+        "SceneKey": "scene12c",
+        "Lines": [
+            { "spaces": 0, "line": "You insert the green diskette and type \"Load Scorpion\"" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "Once loaded, the screen reads:" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 12, "line": "*CORPION" },
+            { "spaces": 0, "line": "*URPOSE: *O STUDY THE EFFECTS OF GAMMA RADIATION" },
+            { "spaces": 9, "line": "ON THE *RIZONA *CORPION." }
+        ],
+        "Actions": [
+            { "target": "scene12_end", "text": "Read on" },
+            { "target": "scene12d", "text": "Insert the red diskette" }
+        ]
+    },
+    {
+        "SceneKey": "scene12d",
+        "Lines": [
+            { "spaces": 0, "line": "You insert the red diskette and type \"Load White Sands.\"" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 14, "line": "'|-} X-_|'" },
+            { "spaces": 8, "line": "_-X|_,-|~- -Q|Q'" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 1, "line": "-LASSIFIED BY ~XECUTIVE -RDER 117602" },
+            { "spaces": 1, "line": "-ECLASSIFY ON |-Q~_" },
+            { "spaces": 2, "line": "_EMAINING *ECTION '|' $GENTS AS OF ('ULY 84)" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "A) -|ROFESSOR oARREN |REEN - oASH.&nbsp;&nbsp;&nbsp;-.-." },
+            { "spaces": 0, "line": "B) -HRISTOPHER -OLEMAN - |EHRAN/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|ENEVA" },
+            { "spaces": 0, "line": "C) |EN. |ERNARD -DWARD LANDRUM -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*LEXANDRIA, X* "},
+            { "spaces": 0, "line": "-ND OF _ILE" }
+        ],
+        "Actions": [
+            { "target": "scene12e", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene12e",
+        "Lines": [
+            { "spaces": 0, "line": "You are not quite sure what all of this means but you write" },
+            { "spaces": 0, "line": "down the names on a piece of scratch paper and shut down the" },
+            { "spaces": 0, "line": "computer. You return the diskettes to the safe and lock it" },
+            { "spaces": 0, "line": "and the inner door, once again. You now return to Landry's" },
+            { "spaces": 0, "line": "office to replace everything. As you are putting the filing" },
+            { "spaces": 0, "line": "cabinet key back, you notice a photograph on the desk." },
+            { "spaces": 0, "line": "It is a picture of a young Landry in a flight suit shaking" },
+            { "spaces": 0, "line": "hands with Lyndon Johnson. The picture was apparently" },
+            { "spaces": 0, "line": "taken in a desert somewhere. You slip the picture from the" },
+            { "spaces": 0, "line": "frame and turn it over. On the back is an inscription:" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 2, "line": "`To Bernie Landrum`" },
+            { "spaces": 6, "line": "Thanks - L.B.J." }
+        ],
+        "Actions": [
+            { "target": "scene12f", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene12f",
+        "Lines": [
+            { "spaces": 0, "line": "You take out the piece of scrap paper and note the name" },
+            { "spaces": 0, "line": "\"Bernard Edward Landrum\" on the list. Are Gen. Landrum and" },
+            { "spaces": 0, "line": "Col. Landry the same man? Maybe you should check out the" },
+            { "spaces": 0, "line": "names on the list." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "You decide that you have done about all you can do from the" },
+            { "spaces": 0, "line": "office. Tomorrow you start a four day break. You'll just" },
+            { "spaces": 0, "line": "have to wait until then." }
+        ],
+        "Actions": [
+            { "target": "scene13", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene12_end",
+        "Lines": [
+            { "spaces": 0, "line": "You keep reading and fall asleep. You wake up surrounded by" },
+            { "spaces": 0, "line": "guards and are whisked away to prison for espionage. You are" },
+            { "spaces": 0, "line": "traded for an American political prisoner in Siberia and" },
+            { "spaces": 0, "line": "never seen again." }
+        ],
+        "Actions": [
+            { "target": "scene1", "text": "Try Again" },
+            { "target": "quit", "text": "Quit" }
+        ]
+    },
+    {
+        "SceneKey": "scene13",
+        "Lines": [
+            { "spaces": 0, "line": "You are on your first day of break. You take out the scrap of" },
+            { "spaces": 0, "line": "paper and study it." }
+        ],
+        "Actions": [
+            { "target": "scene13b", "text": "Investigate Professor Green" },
+            { "target": "scene13c", "text": "Investigate Christopher Coleman" },
+            { "target": "scene13d", "text": "Investigate Colonel Landry" },
+            { "target": "scene13d", "text": "Investigate General Landrum" }
+        ]
+    },
+    {
+        "SceneKey": "scene13b",
+        "Lines": [
+            { "spaces": 0, "line": "You see that Washington, DC is written after Prof." },
+            { "spaces": 0, "line": "Green's name. You take out your Washington phone book" },
+            { "spaces": 0, "line": "and find a \"W. Green\" listed at 204 Chase Court in Anacostia." }
+        ],
+        "Actions": [
+            { "target": "scene13e", "text": "Call him up" },
+            { "target": "scene13g", "text": "Go to his house" }
+        ]
+    },
+    {
+        "SceneKey": "scene13c",
+        "Lines": [
+            { "spaces": 0, "line": "You see that Christopher Coleman is listed as being in Tehran" },
+            { "spaces": 0, "line": "or Geneva. You decide that the best way to track him down is" },
+            { "spaces": 0, "line": "probably through Landry." }
+        ],
+        "Actions": [
+            { "target": "scene13", "text": "Investigate someone else" }
+        ]
+    },
+    {
+        "SceneKey": "scene13d",
+        "Lines": [
+            { "spaces": 0, "line": "You take out your phonebook and turn to the \"L'\"s. As you are" },
+            { "spaces": 0, "line": "going down the page you see:" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "Landrum, B E&nbsp;&nbsp;12 Brooks Dr. 555-1717" },
+            { "spaces": 0, "line": "Landry, E T&nbsp;&nbsp;&nbsp;Alexandria&nbsp;&nbsp;&nbsp;&nbsp;555-1718" },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "It suddenly occurs to you that you have a recall roster with" },
+            { "spaces": 0, "line": "Col. Landry's address on it. You take it out and check it." },
+            { "spaces": 0, "line": "Sure enough, it lists his home as 12 Brooks Dr., Alexandria." }
+        ],
+        "Actions": [
+            { "target": "scene14", "text": "Call him" },
+            { "target": "scene14c", "text": "Go see him in person" }
+        ]
+    },
+    {
+        "SceneKey": "scene13e",
+        "Lines": [
+            { "spaces": 0, "line": "You dial the phone number and a woman answers. You ask if" },
+            { "spaces": 0, "line": "Professor Green is in and you hear a laugh, then she hangs up."}
+        ],
+        "Actions": [
+            { "target": "scene13f", "text": "Try to call again" },
+            { "target": "scene13g", "text": "Go to his house" }
+        ]
+    },
+    {
+        "SceneKey": "scene13f",
+        "Lines": [
+            { "spaces": 0, "line": "The same woman answers the phone. She laughs and hangs" },
+            { "spaces": 0, "line": "up again. It's clear she will not answer your question." }
+        ],
+        "Actions": [
+            { "target": "scene13g", "text": "Go to Professor Green's house" }
+        ]
+    },
+    {
+        "SceneKey": "scene13g",
+        "Lines": [
+            { "spaces": 0, "line": "You drive to Anacostia. The neighborhood is very" },
+            { "spaces": 0, "line": "run down and it is getting late at night. Your Corvette" },
+            { "spaces": 0, "line": "sticks out like a sore thumb. You arrive at the right" },
+            { "spaces": 0, "line": "address, enter the building and knock on the door. The door" },
+            { "spaces": 0, "line": "opens as far as the chain lock will permit and a woman asks" },
+            { "spaces": 0, "line": "what you want. You ask for Green and the door closes in your" },
+            { "spaces": 0, "line": "face. You hear mumbling inside. Suddenly, the door flies" },
+            { "spaces": 0, "line": "open and a man the size of the Incredible Hulk is" },
+            { "spaces": 0, "line": "glaring at you. He informs you that unless you want to spend" },
+            { "spaces": 0, "line": "the remainder of your life looking out your asshole, you'd" },
+            { "spaces": 0, "line": "better take a hike. You decide that you probably have the" },
+            { "spaces": 0, "line": "wrong address after all, thank him, and run for your life." },
+            { "spaces": 0, "line": "You're back in your car, heading home, plotting your next" },
+            { "spaces": 0, "line": "move." }
+        ],
+        "Actions": [
+            { "target": "scene13", "text": "Try someone else on the list" },
+            { "target": "scene13h", "text": "Check the local colleges for a Prof. Green" } 
+        ]
+    },
+    {
+        "SceneKey": "scene13h",
+        "Lines": [
+            { "spaces": 0, "line": "You spend most of the next day checking the colleges" },
+            { "spaces": 0, "line": "and you finally locate your man at Georgetown University." },
+            { "spaces": 0, "line": "You cannot get him on the phone so you decide to drive over." },
+            { "spaces": 0, "line": "As you are arriving at the engineering department, you see" },
+            { "spaces": 0, "line": "several police cars and an ambulance. When you ask a student" },
+            { "spaces": 0, "line": "what is happening, he tells you than someone just shot" },
+            { "spaces": 0, "line": "Professor Green." }
+        ],
+        "Actions": [
+            { "target": "scene13i", "text": "Follow the ambulance to the hospital" },
+            { "target": "scene13", "text": "Try someone else on the list" }
+        ]
+    },
+    {
+        "SceneKey": "scene13i",
+        "Lines": [
+            { "spaces": 0, "line": "When you arrive at the hospital, you are prevented from" },
+            { "spaces": 0, "line": "seeing Green by the police. When you try to ask questions" },
+            { "spaces": 0, "line": "about the Professor, you are arrested for suspicion. When" },
+            { "spaces": 0, "line": "you are finally released, you learn that the Professor died" },
+            { "spaces": 0, "line": "of his wounds without identifying his assailant." }
+        ],
+        "Actions": [
+            { "target": "scene13", "text": "Try someone else on the list" },
+            { "target": "scene13", "text": "Have a stiff drink and then try someone else" }
+        ]
+    },
+    {
+        "SceneKey": "scene14",
+        "Lines": [
+            { "spaces": 0, "line": "You dial 555-1717 and get a busy signal so you dial" },
+            { "spaces": 0, "line": "555-1718 and get the same." }
+        ],
+        "Actions": [
+            { "target": "scene14b", "text": "Try dialing again" },
+            { "target": "scene14c", "text": "Go see him in person" }
+        ]
+    },
+    {
+        "SceneKey": "scene14b",
+        "Lines": [
+            { "spaces": 0, "line": "You continue to get a busy signal on both numbers." },
+            { "spaces": 0, "line": "There is no reason to believe your call will be answered" },
+            { "spaces": 0, "line": "anytime soon." }
+        ],
+        "Actions": [
+            { "target": "scene14c", "text": "Go see Landry in person" }
+        ]
+    },
+    {
+        "SceneKey": "scene14c",
+        "Lines": [
+            { "spaces": 0, "line": "You drive to Landry's house. By now, it is late at night." },
+            { "spaces": 0, "line": "You notice a car parked in front with a State Department seal" },
+            { "spaces": 0, "line": "on it. You decide to sneak up and look in the window and" },
+            { "spaces": 0, "line": "you see figures moving around the room. You can see Landry" },
+            { "spaces": 0, "line": "talking, or rather arguing with two men. One of the men" },
+            { "spaces": 0, "line": "pulls a gun from his pocket and shoots Landry between the" },
+            { "spaces": 0, "line": "eyes. You figure it's time to get the hell out of there." },
+            { "spaces": 0, "line": "You are chased back to your car by a Doberman and leave the" },
+            { "spaces": 0, "line": "seat of your pants in the dog's mouth, but manage to escape." }
+        ],
+        "Actions": [
+            { "target": "scene14d", "text": "Call the police" },
+            { "target": "scene15", "text": "Book a flight to Geneva" }
+        ]
+    },
+    {
+        "SceneKey": "scene14d",
+        "Lines": [
+            { "spaces": 0, "line": "You call the police and tell them about the crime. They" },
+            { "spaces": 0, "line": "tell you they will check it out and call you back. As you" },
+            { "spaces": 0, "line": "are waiting for a reply, a car just like the one you saw at" },
+            { "spaces": 0, "line": "Landry's pulls up in front of your house. Two familiar" },
+            { "spaces": 0, "line": "looking men get out and approach your front door." }
+        ],
+        "Actions": [
+            { "target": "scene14e", "text": "Invite them in" },
+            { "target": "scene15", "text": "Book a flight to Geneva" }
+        ]
+    },
+    {
+        "SceneKey": "scene14e",
+        "Lines": [
+            { "spaces": 0, "line": "Look, you've lasted this long, don't blow it now! Take a hint" },
+            { "spaces": 0, "line": "and book yourself a flight to Geneva. What do you say?" }
+        ],
+        "Actions": [
+            { "target": "scene15", "text": "Okay, I'm convinced!" },
+            { "target": "scene14f", "text": "No thanks, I'll risk it!" }
+        ]
+    },
+    {
+        "SceneKey": "scene14f",
+        "Lines": [
+            { "spaces": 0, "line": "Someone knocks at your door. You tell them you're coming." },
+            { "spaces": 0, "line": "Suddenly the door crashes in and two men enter with guns" },
+            { "spaces": 0, "line": "ablaze. You just manage to get out the back door and get" },
+            { "spaces": 0, "line": "away. You decide you've learned your lesson and you'll go" },
+            { "spaces": 0, "line": "ahead and book that flight to Geneva now, thank you." }
+        ],
+        "Actions": [
+            { "target": "scene15", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene15",
+        "Lines": [
+            { "spaces": 0, "line": "You arrive at the airport and check the Departures board." },
+            { "spaces": 0, "line": "Pan Am has a clipper to Geneva via Lisbon in one hour." },
+            { "spaces": 0, "line": "You buy your ticket and proceed to the bar for a drink." },
+            { "spaces": 0, "line": "The waiter comes to take your order. What will you have?" }
+        ],
+        "Actions": [
+            { "target": "scene15b", "text": "Scotch" },
+            { "target": "scene15c", "text": "Gin and Tonic" },
+            { "target": "scene15d", "text": "Rum and Coke" }
+        ]
+    },
+    {
+        "SceneKey": "scene15b",
+        "Lines": [
+            { "spaces": 0, "line": "The scotch is a cheap bar brand and you are not disappointed" },
+            { "spaces": 0, "line": "that you only drink about two sips when your flight's called." }
+        ],
+        "Actions": [
+            { "target": "scene16", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene15c",
+        "Lines": [
+            { "spaces": 0, "line": "The gin tastes like paint thinner and you are not at all" },
+            { "spaces": 0, "line": "sorry to leave half a drink when your flight is called." }
+        ],
+        "Actions": [
+            { "target": "scene16", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene15d",
+        "Lines": [
+            { "spaces": 0, "line": "The rum is excellent and you are pleasantly surprised that" },
+            { "spaces": 0, "line": "an airport bar would have what is certainly a class brand." },
+            { "spaces": 0, "line": "You are just beginning to relax when you hear your flight" },
+            { "spaces": 0, "line": "being called. With some regret, you leave the drink behind." }
+        ],
+        "Actions": [
+            { "target": "scene16", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene16",
+        "Lines": [
+            { "spaces": 0, "line": "The flight is comfortably dull and you sink into a semi-" },
+            { "spaces": 0, "line": "conscious fog as the 747 heads across the Atlantic en-route to" },
+            { "spaces": 0, "line": "Lisbon." },
+            { "spaces": 0, "line": "" },
+            { "spaces": 0, "line": "You are rudely awakened several hours later by the cabin" },
+            { "spaces": 0, "line": "lights and the pilot's announcement that you are about to" },
+            { "spaces": 0, "line": "begin the descent. Thirty minutes later the wheels touch down" },
+            { "spaces": 0, "line": "and the stewardess informs you that the plane will be on the" },
+            { "spaces": 0, "line": "ground for 45 minutes." }
+        ],
+        "Actions": [
+            { "target": "scene16b", "text": "Deplane and wander around the airport" },
+            { "target": "scene17", "text": "Stay in your seat until departure time" }
+        ]
+    },
+    {
+        "SceneKey": "scene16b",
+        "Lines": [
+            { "spaces": 0, "line": "You get off with the rest of the passengers, proceed past" },
+            { "spaces": 0, "line": "customs and head for the gift shop. There seems to be a sale" },
+            { "spaces": 0, "line": "on cork going on but you don't see anything you really need" },
+            { "spaces": 0, "line": "so you decide to go back to the plane and wait until takeoff" },
+            { "spaces": 0, "line": "time. On your way, you realize that you have to go to the" },
+            { "spaces": 0, "line": "bathroom." }
+        ],
+        "Actions": [
+            { "target": "scene16c", "text": "Find a bathroom in the airport" },
+            { "target": "scene17", "text": "Wait until you're on the plane" }
+        ]
+    },
+    {
+        "SceneKey": "scene16c",
+        "Lines": [
+            { "spaces": 0, "line": "You find a bathroom in the next concourse. There is a" },
+            { "spaces": 0, "line": "short line and as you are waiting you glance at your watch and" },
+            { "spaces": 0, "line": "realize that you'll have to hurry to get back on the flight." },
+            { "spaces": 0, "line": "As you are heading back, you hear the last call for Geneva." },
+            { "spaces": 0, "line": "Now the customs agent is scrutinizing your passport. You try" },
+            { "spaces": 0, "line": "not to act nervous but you know the plane won't wait for you." },
+            { "spaces": 0, "line": "You try to explain that your plane is leaving, but the agent" },
+            { "spaces": 0, "line": "just smiles. Then he stamps the passport and you run to" },
+            { "spaces": 0, "line": "the boarding ramp. You are the last one on board and the" },
+            { "spaces": 0, "line": "stewardess looks at you coldly as you return to your seat." },
+            { "spaces": 0, "line": "Fifteen minutes later you are once again on your way" },
+            { "spaces": 0, "line": "to Geneva."}
+        ],
+        "Actions": [
+            { "target": "scene17", "text": "Next" }
+        ]
+    },
+    {
+        "SceneKey": "scene17",
+        "Lines": [
+            { "spaces": 0, "line": "The flight to Geneva lasts three hours and it" },
+            { "spaces": 0, "line": "is nearly noon when you arrive. The beautiful city" },
+            { "spaces": 0, "line": "beckons but you know you still have a lot of work" },
+            { "spaces": 0, "line": "to do . . ." }
+        ],
+        "Actions": [
+            { "target": "chapter1_end", "text": "End of Chapter 1" }
+        ]
+    },
+    {
+        "SceneKey": "chapter1_end",
+        "Lines": [
+            { "spaces": 0, "line": "This is the end of Chapter 1. Welcome to Geneva!" }
+        ],
+        "Actions": [
+            { "target": "scene1", "text": "Restart" },
+            { "target": "quit", "text": "Quit" }
         ]
     }
 ]
