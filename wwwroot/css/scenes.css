@@ -33,14 +33,14 @@
     font-family: 'ClassicConsole';
     font-size: 30px;
     margin-left: 3px;
-    margin-top: 3px;
+    margin-top: 6px;
     line-height: 0em;
 }
 
 .availableActions {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
-.restartButton {
-    margin-bottom: 10px;
+.actionButton {
+    margin-bottom: 5px;
 }

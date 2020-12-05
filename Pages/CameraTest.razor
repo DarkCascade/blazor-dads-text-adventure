@@ -1,0 +1,19 @@
+@page "/cameraTest"
+@inject IJSRuntime JSRuntime;
+
+<h2>Hi there!</h2>
+
+<video id="video" width="640" height="480" autoplay></video>
+
+<div>
+    <button type="button"
+            class="btn btn-primary"
+            @onclick="StartVideo">Click Me</button>
+</div>
+
+@code {
+    async Task StartVideo()
+    {
+        await JSRuntime.InvokeVoidAsync("startVideo");
+    }
+}
